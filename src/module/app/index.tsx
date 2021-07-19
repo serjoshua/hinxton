@@ -90,23 +90,35 @@ const App: React.FC<AppProps> = () => {
                   <tbody>
                     <tr>
                       <td>ID</td>
-                      <td>{ontology.ontologyId}</td>
+                      <td>
+                        {ontology?.ontologyId ? ontology.ontologyId : "N/A"}
+                      </td>
                     </tr>
                     <tr>
                       <td>TITLE</td>
-                      <td>{ontology.title}</td>
+                      <td>{ontology?.title ? ontology.title : "N/A"}</td>
                     </tr>
                     <tr>
                       <td>DECRIPTION</td>
-                      <td>{ontology.description}</td>
+                      <td>
+                        {ontology?.description ? ontology.description : "N/A"}
+                      </td>
                     </tr>
                     <tr>
                       <td>DEFINITIONS</td>
-                      <td>{ontology.definitionProperties.join(", ")}</td>
+                      <td>
+                        {ontology?.definitionProperties
+                          ? ontology.definitionProperties.join(", ")
+                          : "N/A"}
+                      </td>
                     </tr>
                     <tr>
                       <td>SYNONYMS</td>
-                      <td>{ontology.synonymProperties.join(", ")}</td>
+                      <td>
+                        {ontology?.synonymProperties
+                          ? ontology.synonymProperties.join(", ")
+                          : "N/A"}
+                      </td>
                     </tr>
                   </tbody>
                 </table>
