@@ -1,0 +1,17 @@
+.loading {
+  height: 100%; /* 100% Full-height */
+  width: 100%; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 10000; /* Stay on top */
+  top: 0; /* Stay at the top and maximize height */
+  right: 0; /* Stay at the right and maximize width */
+  background-color: grey;
+  opacity: 0.5;
+  padding-top: 20%;
+  text-align: center;
+
+  .fa-spinner {
+    font-size: 7em;
+    color: white;
+  }
+}

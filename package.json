@@ -10,6 +10,9 @@
     "@types/node": "^12.20.16",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
+    "axios": "^0.21.1",
+    "bulma": "^0.9.3",
+    "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -17,6 +20,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "build-css": "node-sass --include-path ./src --include-path ./node_modules src/ -o src/ --output-style compressed",
+    "watch-css": "npm run build-css && node-sass --include-path ./src --include-path ./node_modules src/ -o src/ --output-style compressed --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
